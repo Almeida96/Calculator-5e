@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculator-5e"
+version = "1.0.0"
+description = "D&D 2014 overland travel planner with desktop, CLI, and MCP interfaces"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.28,<2"]
+dev = ["build>=1.2,<2", "ruff>=0.14,<0.18"]
+
+[project.scripts]
+calculator-5e = "calculator_5e.cli:main"
+calculator-5e-mcp = "calculator_5e.mcp_server:main"
+
+[project.gui-scripts]
+calculator-5e-gui = "calculator_5e.gui:main"
+
+[project.urls]
+Repository = "https://github.com/Almeida96/Calculator-5e"
+Issues = "https://github.com/Almeida96/Calculator-5e/issues"
+
+[tool.setuptools.packages.find]
+include = ["calculator_5e*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
