@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "unit": "mi",
+  "pace": "normal",
+  "hours_per_day": 8,
+  "basis": "daily",
+  "legs": [
+    {"name": "Road to the forest", "distance": 12, "terrain": "normal"},
+    {"name": "Forest trail", "distance": 9, "terrain": "difficult"},
+    {"name": "Road to the keep", "distance": 6, "terrain": "normal"}
+  ]
+}
